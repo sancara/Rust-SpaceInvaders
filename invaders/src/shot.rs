@@ -18,7 +18,7 @@ impl Shot {
             timer: Timer::from_millis(50),
         }
     }
-    pub fn update(&mut self, delta:Duration) {
+    pub fn update(&mut self, delta: Duration) {
         self.timer.update(delta);
         if self.timer.ready && !self.exploding {
             if self.y > 0 {
@@ -38,6 +38,6 @@ impl Shot {
 
 impl Drawable for Shot {
     fn draw(&self, frame: &mut Frame) {
-        frame[self.x][self.y] = if self.exploding {'*'} else {'|'};
+        frame[self.x][self.y] = if self.exploding { '*' } else { '|' };
     }
 }
