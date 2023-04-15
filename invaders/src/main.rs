@@ -157,3 +157,4 @@ fn main() -> Result<(), Box<dyn Error>> {
     stdout.execute(LeaveAlternateScreen)?;
     terminal::disable_raw_mode()?;
     Ok(())
+}
