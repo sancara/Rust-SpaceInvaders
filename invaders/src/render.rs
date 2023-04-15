@@ -14,7 +14,7 @@ use std::io::{Stdout, Write};
         stdout.queue(SetForegroundColor(Color::Black)).unwrap();
     }
 
-    for (x, col) in curr_frame.iter().enumerate() {
+    for (x, col) in curr_frame.iter().enumerate(){
         for (y, s) in col.iter().enumerate() {
             if *s != last_frame[x][y] || force {
                 stdout.queue(MoveTo(x as u16, y as u16)).unwrap();
