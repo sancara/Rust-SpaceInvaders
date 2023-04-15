@@ -17,7 +17,7 @@ impl Player {
         Self {
             x: NUM_COLS / 2,
             y: NUM_ROWS -1,
-            shots: Vec::new();
+            shots: Vec::new(),
         }
     }
 

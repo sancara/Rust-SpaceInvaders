@@ -1,7 +1,7 @@
 pub mod frame;
 pub mod render;
 pub mod player;
-pub mod shoot;
+pub mod shot;
 pub mod invaders;
 
 
