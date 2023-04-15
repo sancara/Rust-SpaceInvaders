@@ -30,6 +30,10 @@ fn main() -> Result <(), Box<dyn Error>> {
     stdout.execute(EnterAlternateScreen)?;
     stdout.execute(Hide)?;
 
+    // Render Loop in a separate thread
+    let (render_tx, render_rx) = mpsc::channel();
+    
+
     // Game Loop
     'gameloop: loop {
         while event::poll(Duration::default())? {
